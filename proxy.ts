@@ -1,9 +1,7 @@
+import NextAuth from 'next-auth';
+import { authConfig } from './auth.config';
 
-import { auth } from '@/auth';
-
-export default auth((req) => {
-  // req.auth is available, and req.auth.user is available
-});
+export default NextAuth(authConfig).auth;
 
 export const config = {
   // https://nextjs.org/docs/app/api-reference/file-conventions/proxy#matcher
