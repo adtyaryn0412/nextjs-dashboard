@@ -126,17 +126,11 @@ export async function authenticate(
   formData: FormData,
 ) {
   try {
-    const result = await signIn('credentials', {
+    await signIn('credentials', {
       email: formData.get('email') as string,
       password: formData.get('password') as string,
-      redirect: false,
+      redirectTo: '/dashboard',
     });
-    
-    if (!result?.ok) {
-      return 'Invalid credentials.';
-    }
-    
-    redirect('/dashboard');
   } catch (error) {
     if (error instanceof AuthError) {
       switch (error.type) {
