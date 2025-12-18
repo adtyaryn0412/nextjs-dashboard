@@ -10,9 +10,9 @@ const users = [
 
   {
     id: 'd939634b-4321-4123-9876-543210fabcde', 
-    name: 'Aditya Ryan Affandi',
-    email: 'aditya@gmail.com', 
-    password: 'adit185',  
+    name: 'Aditya Ryan',
+    email: 'adtyaryn@gmail.com', 
+    password: 'adit123',  
   },
 ];
 
